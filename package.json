@@ -1,0 +1,13 @@
+{
+  "name": "advent-of-code-2022",
+  "version": "1.0.0",
+  "description": "Advent of Code 2022",
+  "main": "index.js",
+  "repository": "https://github.com/elaiwon/advent-of-code-2022",
+  "author": "Carlos Oliveira",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  }
+}
