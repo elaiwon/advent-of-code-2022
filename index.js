@@ -1,19 +1,24 @@
 import fs from 'fs';
 import { puzzle_1a, puzzle_1b, validate_1a, validate_1b } from './lib/puzzle_1/index.js';
 import { puzzle_2a, puzzle_2b, validate_2a, validate_2b } from './lib/puzzle_2/index.js';
+import { puzzle_3a, puzzle_3b, validate_3a, validate_3b } from './lib/puzzle_3/index.js';
 
 const puzzles = {
   "1a": puzzle_1a,
   "1b": puzzle_1b,
   "2a": puzzle_2a,
-  "2b": puzzle_2b
+  "2b": puzzle_2b,
+  "3a": puzzle_3a,
+  "3b": puzzle_3b
 };
 
 const validate = {
   "1a": validate_1a,
   "1b": validate_1b,
   "2a": validate_2a,
-  "2b": validate_2b
+  "2b": validate_2b,
+  "3a": validate_3a,
+  "3b": validate_3b
 };
 
 const puzzleName= process.argv[2];
