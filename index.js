@@ -75,5 +75,6 @@ if (dataName === 'test') {
 } else {
   const answer = puzzles[puzzleName](file);
 
-  console.log(`Answer for puzzle ${puzzleName}: ${answer}`);
+  console.log(`Answer for puzzle ${puzzleName}\n`);
+  console.log(answer);
 }
