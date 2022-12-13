@@ -66,7 +66,7 @@ if (dataName === 'test') {
     const [resultA, resultB, data] = t.split('|');
     const result = /a/.test(puzzleName) ? resultA && JSON.parse(resultA) : resultB && JSON.parse(resultB);
 
-    if (result) {
+    if (result !== undefined) {
       const answer = puzzles[puzzleName](data);
   
       console.log(`Answer for puzzle ${puzzleName} (${i}): ${answer} (${answer === result ? '\x1B[32mCorrect\x1B[m' : '\x1B[31mWrong\x1B[m'})`);
