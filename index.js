@@ -64,12 +64,13 @@ if (dataName === 'test') {
   const tests = file.split('------');
   tests. forEach((t, i) => {
     const [resultA, resultB, data] = t.split('|');
-    const result = /a/.test(puzzleName) ? resultA && JSON.parse(resultA) : resultB && JSON.parse(resultB);
+    const result = /a/.test(puzzleName) ? resultA : resultB;
+    const [expected, input] = (result && result.split(',')) || [null, null];  
 
     if (result !== undefined) {
-      const answer = puzzles[puzzleName](data);
+      const answer = puzzles[puzzleName](data, input);
   
-      console.log(`Answer for puzzle ${puzzleName} (${i}): ${answer} (${answer === result ? '\x1B[32mCorrect\x1B[m' : '\x1B[31mWrong\x1B[m'})`);
+      console.log(`Answer for puzzle ${puzzleName} (${i}): ${answer} (${answer === JSON.parse(expected) ? '\x1B[32mCorrect\x1B[m' : '\x1B[31mWrong\x1B[m'})`);
     }
   });
 } else {
