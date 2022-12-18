@@ -67,7 +67,7 @@ if (dataName === 'test') {
     const result = /a/.test(puzzleName) ? resultA : resultB;
     const [expected, input] = (result && result.split(',')) || [null, null];  
 
-    if (result !== undefined) {
+    if ((result !== undefined) && (result !== '')) {
       const answer = puzzles[puzzleName](data, input);
   
       console.log(`Answer for puzzle ${puzzleName} (${i}): ${answer} (${answer === JSON.parse(expected) ? '\x1B[32mCorrect\x1B[m' : '\x1B[31mWrong\x1B[m'})`);
